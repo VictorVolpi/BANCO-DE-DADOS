@@ -1,76 +1,39 @@
-USE bdLojadeRoupa
+USE bdEscola1
 
-INSERT INTO tbCliente (nomeCliente, idadeCliente)
+INSERT INTO tbCurso (nomeCurso,cargahorariaCurso,valorCurso)
 VALUES
-	('Kaua de Souza',22)
-	,('Diego Olegario',22)
-	,('Ruthe Almeida',21)
-	,('Rosangela Freire',45)
-	,('Vanessa Lopes',43)
-	SELECT * FROM tbCliente
+	('Ingles','2000',356.00)
+	,('Alemao','3000',478.00)
+	SELECT * FROM tbCurso
 
-INSERT INTO tbFabricante (nomeFabricante)
+INSERT INTO tbAluno (nomeAluno,dataNascimentoAluno,rgAluno, naturalidadeAluno)
 VALUES
-	('Malwee')
-	,('Marisol')
-	,('Cia da Malha')
-	SELECT * FROM tbFabricante
+	('Paulo Santos','2000/10/03','82.292.122-0','SP')
+	,('Maria da Gloria','1999/03/10','45.233.123-0','SP')
+	,('Perla Nogueira Silva ','1998/04/04','23.533.211-9','SP')
+	,('Gilson Barros Silva','1995/09/09','34.221.111-X','PE')
+	,('Mariana Barbosa Santos','2001/10/10','45.233.123-0','RJ')
+	SELECT * FROM tbAluno
 
-INSERT INTO tbVendedor (nomeVendedor) 
+INSERT INTO tbTurma (nomeTurma,horarioTurma,idCurso)
 VALUES
+	('1|A','1900/01/01',1)
+	,('1|B','1900/01/01',1)
+	,('1|AA','1900/01/01',2)
+	SELECT * FROM tbTurma
 
-	('João Santana')
-	,('Raquel Torres')
-	SELECT * FROM tbVendedor
 
-INSERT INTO tbFuncionario (nomeFuncionario, idadeFuncionario, dataAdimissao, salarioFuncionario)
+INSERT INTO tbMatricula (dataMatricula,idAluno,idTurma)
 VALUES
-	('Victor Volpi', 21, '11/05/2022', 1200)
-	,('Bruno Silva' , 22, '11/05/2022', 1200)
-	SELECT * FROM tbFuncionario
-
-INSERT INTO tbVenda (dataVenda , totalVenda  , idCliente, idVendedor) 
-VALUES
-		('15/08/2022',699.99,1,1)
-		,('17/09/2022',449.99,2,1)
-		,('19/10/2022',400,3,1)
-		,('21/11/2022',364.84,4,2)
-		,('23/12/2022',372.99,5,2)
-	
-	SELECT * FROM tbVenda
-
-	INSERT INTO tbProduto (nomeProduto , preçoProduto  ,dataEntradaProduto, estoqueProduto, idFuncionario, idFabricante ) 
-VALUES
-	
-	('Camisetas Nike',99.99,'02/07/2022',64,1,1)
-	,('Tênis Nike',150,'05/07/2022',88,2,1)
-	,('Blusa Nike',349,'08/07/2022',75,1,1)
-	,('Camisetas Adidas',59.99,'02/07/2022',64,2,2)
-	,('Tênis Adidas',120,'05/07/2022',88,1,2)
-	,('Blusa Adidas',300,'08/07/2022',75,2,2)
-	,('Camisetas Puma',99.99,'02/07/2022',64,1,3)
-	,('Tênis Puma',150,'05/07/2022',88,2,3)
-	,('Blusa Puma',349,'08/07/2022',75,1,3)
-
-	SELECT * FROM tbProduto
-
-
-	INSERT INTO tbItensVenda(quantidadeItens, subTotalItens,idVenda,idProduto ) 
-VALUES
-
-		(15,64,1,1)
-		,(26,88,1,2)
-		,(5,75,2,3)
-		,(7,64,2,4)
-		,(8,75,3,6)
-		,(6,64,3,7)
-		,(4,88,4,5)
-		,(6,88,4,8)
-		,(2,75,5,9)
-		,(5,64,5,7)
-
-
-	SELECT * FROM tbItensVenda
+	('2015/03/10',1,1)
+	,('2014/04/05',2,1)
+	,('2012/03/05',3,2)
+	,('2016/03/03',1,3)
+	,('2015/07/05',4,2)
+	,('2015/05/07',4,3)
+	,('2015/06/06',5,1)
+	,('2015/05/05',5,3)
+	SELECT * FROM tbMatricula
 
 
 
